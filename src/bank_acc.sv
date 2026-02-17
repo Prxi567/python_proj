@@ -1,12 +1,4 @@
-1.Write a Python class BankAccount that manages a simple bank account with the following features:
-Requirements:
- Initialize with account number, holder name, and initial balance (default 0)
- Implement deposit(amount) method that adds money (must be positive)
- Implement withdraw(amount) method that removes money (check sufficient balance)
- Implement get_balance() method to return current balance
- Implement transfer(amount, target_account) to transfer money to another account
- Maintain transaction history (list of all transactions with type, amount, and timestamp)
- Implement __str__() for readable representation
+
 from datetime import datetime
 
 class Account:
@@ -79,20 +71,3 @@ print("\nAccount 2 Transaction History:")
 for item in a2.history:
     print(item)
 
-output-
-Acc No: 1111 | Name: Ravi | Balance: 15000
-Acc No: 2222 | Name: Neha | Balance: 12000
-Money added successfully
-Acc No: 1111 | Name: Ravi | Balance: 18000
-Money withdrawn successfully
-Acc No: 1111 | Name: Ravi | Balance: 15500
-Transfer completed successfully
-Acc No: 2222 | Name: Neha | Balance: 16000
-
-Account 1 Transaction History:
-('CREDIT', 3000, datetime.datetime(2026, 2, 16, 8, 17, 32, 304301))
-('DEBIT', 2500, datetime.datetime(2026, 2, 16, 8, 17, 32, 304321))
-('TRANSFER_OUT', 4000, datetime.datetime(2026, 2, 16, 8, 17, 32, 304331))
-
-Account 2 Transaction History:
-('TRANSFER_IN', 4000, datetime.datetime(2026, 2, 16, 8, 17, 32, 304332))
